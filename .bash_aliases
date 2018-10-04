@@ -14,5 +14,5 @@ alias sl='ls'
 alias efind='tree --prune -P $1'
 # find lines in files files matching a given pattern of a given file type in the current directory or any subdirectories
 alias gfind='function gfind01(){ grep -r -n --include=\*$2 $1; unset -f gfind01; }; gfind01'
-# convert mp4 to mp3
+# convert mp4 to mp3 by stripping audio from a video (e.g. a youtube video)
 alias v2m='function v2m01(){ ffmpeg -i "$1" -f mp3 -ab 192000 -vn "${1::-4}.mp3"; unset -f v2m01; }; v2m01'
